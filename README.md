@@ -6,13 +6,13 @@ When the above situation occurs then ActionForm properties gets modified and no 
 This issue is replicable only in commons-beanutils-1.7.0.jar. 
 Please follow the below steps to replicate the issue.
 1)	Unzip and import below project in eclipse.
-2)	Access http://localhost:8080/StrutsExample/EmployeeRegister.jsp and click on Submit button without entering any values.
+2)	Access http://localhost:21580/StrutsExample-1547/EmployeeRegister.jsp and click on Submit button without entering any values.
 3)	Once page reloaded with errors, modify the browser URL as mentioned below,
 
-http://localhost:8080/StrutsExample/Register.do?multipartRequestHandler.servlet.servletContext.attribute(org.apache.struts.action.MODULE)=java
+http://localhost:21580/StrutsExample-1547/Register.do?multipartRequestHandler.servlet.servletContext.attribute(org.apache.struts.action.MODULE)=java
 
 4)	Once URL is changed in browser, select it and click on enter(Enter it couple of times). Browser page will be reloaded with below error.
-5)	Now try to access the original URL(http://localhost:8080/StrutsExample/EmployeeRegister.jsp) or any other parts of the application. 
+5)	Now try to access the original URL(http://localhost:21580/StrutsExample-1547/EmployeeRegister.jsp) or any other parts of the application. 
 
 As shown in the above screen shots, page which was accessible earlier is no longer is accessible and leading to a denial of service attack.
 
